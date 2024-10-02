@@ -1,0 +1,10 @@
+services:
+  - type: static_site
+    name: my-static-site
+    env: static
+    plan: free  # or `starter`, `standard`, etc.
+    staticPublishPath: public  # replace with the folder where your site files (like index.html) are located
+    buildCommand: ""  # no build command for static sites, so leave this empty or remove it
+    envVars:
+      - key: MY_ENV_VAR
+        value: some_value  # add environment variables if necessary (optional)
